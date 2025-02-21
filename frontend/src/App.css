@@ -1,0 +1,167 @@
+/* App.css */
+
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+/* ============================= */
+/* General Page Styling */
+/* ============================= */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-style: regular;
+  background: linear-gradient(270deg, #ff9a9e, #de6645, #2b759d, #c66aff);
+  background-color: black;
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+/* Background gradient animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ============================= */
+/* Container & Layout Styling */
+/* ============================= */
+.container {
+  padding: 40px;
+}
+
+/* Page Title */
+.container h1 {
+  font-size: 2.5em;
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* ============================= */
+/* Card Styling */
+/* ============================= */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual Card */
+.card {
+  background-color: #2f2e2e;
+  border: 10px solid #000000;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+}
+
+/* Delay animation for each card */
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+.card:nth-child(4) { animation-delay: 0.8s; }
+.card:nth-child(5) { animation-delay: 1s; }
+
+/* Card Image */
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Card Title */
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+  color: #efe1e1;
+  border-radius: 15px;
+}
+
+/* Card Text */
+.card p {
+  margin: 5px 0;
+  color: #b1abab;
+  font-size: 0.9em;
+}
+
+/* ============================= */
+/* Card Animations */
+/* ============================= */
+.cards-reloading .card {
+  animation: fadeOut 0.3s forwards;
+}
+
+/* Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade Out */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* ============================= */
+/* Dropdown Styling */
+/* ============================= */
+.dropdown-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Dropdown Label */
+.dropdown-label p {
+  font-size: 1.4em;
+}
+
+/* Dropdown Select Box */
+#limitSelect {
+  font-size: 1em;
+  font-weight: 500;
+  padding: 12px 12px;
+  border-radius: 15px;
+  border: 5px solid #000000;
+  background-color: #413f3f;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none;
+  text-align: center;
+  text-align-last: center;
+}
+
+/* Dropdown Hover Effect */
+#limitSelect:hover {
+  background-color: #413f3f;
+  color: rgb(255, 255, 255);
+}
+
+/* Dropdown Focus Effect */
+#limitSelect:focus {
+  outline: none;
+  border-color: rgb(13, 12, 12);
+  background-color: #413f3f;
+  color: rgb(255, 255, 255);
+}
