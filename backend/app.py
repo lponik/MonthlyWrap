@@ -16,7 +16,7 @@ CORS(app, supports_credentials=True)
 app.secret_key = os.getenv('FLASK_SECRET_KEY', 'your_secret_key')
 CLIENT_ID = os.getenv('SPOTIFY_CLIENT_ID')
 CLIENT_SECRET = os.getenv('SPOTIFY_CLIENT_SECRET')
-REDIRECT_URI = 'http://localhost:8080/callback'
+REDIRECT_URI = 'https://monthlywrap.onrender.com/callback'
 
 # Define required Spotify API scopes
 SCOPE = 'user-read-recently-played user-top-read'

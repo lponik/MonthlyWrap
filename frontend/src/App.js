@@ -24,14 +24,14 @@ function App() {
     // Ensure fade-out completes before fetching new data
     setTimeout(() => {
       Promise.all([
-        fetch('http://localhost:8080/user-info', { credentials: 'include' })
+        fetch('https://monthlywrap.onrender.com/user-info', { credentials: 'include' })
           .then(response => {
             if (!response.ok) {
               throw new Error(`User info HTTP error: ${response.status}`);
             }
             return response.json();
           }),
-        fetch(`http://localhost:8080/top-tracks?limit=${limit}`, { credentials: 'include' })
+        fetch(`https://monthlywrap.onrender.com//top-tracks?limit=${limit}`, { credentials: 'include' })
           .then(response => {
             if (!response.ok) {
               throw new Error(`Top tracks HTTP error: ${response.status}`);
