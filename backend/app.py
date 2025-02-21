@@ -16,7 +16,7 @@ CORS(app, supports_credentials=True)
 app.secret_key = os.getenv('FLASK_SECRET_KEY', 'your_secret_key')
 CLIENT_ID = os.getenv('SPOTIFY_CLIENT_ID')
 CLIENT_SECRET = os.getenv('SPOTIFY_CLIENT_SECRET')
-REDIRECT_URI = 'https://monthlywrap.onrender.com/callback'
+REDIRECT_URI = 'https://monthlywrap.netlify.app/callback'
 
 # Define required Spotify API scopes
 SCOPE = 'user-read-recently-played user-top-read'
@@ -73,7 +73,7 @@ def callback():
     # Store token information with a timestamp
     token_info['created_at'] = int(time.time())
     session['token_info'] = token_info
-    return redirect('http://localhost:3000')
+    return redirect('https://monthlywrap.netlify.app/')
 
 
 @app.route('/user-info')
@@ -181,6 +181,8 @@ def top_tracks():
 # Run the Application    #
 ##########################
 
-if __name__ == '__main__':
+"""
+    if __name__ == '__main__':
     # Start the Flask application on localhost port 8080
     app.run(debug=True, host='localhost', port=8080)
+"""
