@@ -1,6 +1,6 @@
 # Monthly Spotify Top Tracks Dashboard
 
-A full-stack web application that retrieves and displays a user's monthly top tracks from Spotify using Flask and React. This project is designed to work locally.
+A full-stack web application that retrieves and displays a user's monthly top tracks from Spotify using Flask and React. Currently, this project is designed to work locally.
 
 ## Prerequisites
 
